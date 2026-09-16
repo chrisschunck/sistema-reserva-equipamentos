@@ -103,7 +103,3 @@ Ative o perfil de produção com:
 ```bash
 mvn spring-boot:run -Dspring-boot.run.profiles=prod
 ```
-
-## Observação sobre o enunciado
-
-O enunciado recebido contém uma inconsistência: em um trecho menciona migração para Go/COBOL, enquanto a lista de tecnologias obrigatórias exige Java + Spring Boot + JPA + Spring Web. Este projeto segue a lista de tecnologias obrigatórias, que é a opção coerente com a API de Produtos mencionada no desafio.
