@@ -103,3 +103,7 @@ Ative o perfil de produção com:
 ```bash
 mvn spring-boot:run -Dspring-boot.run.profiles=prod
 ```
+## Integrantes Equipe 
+
+Christian Schunck de Almeida - RM563850
+Gustavo Panham Dourado - RM563904
