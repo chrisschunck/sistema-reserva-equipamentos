@@ -106,4 +106,5 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 ## Integrantes Equipe 
 
 Christian Schunck de Almeida - RM563850
+<br>
 Gustavo Panham Dourado - RM563904
