@@ -6,6 +6,7 @@ import com.reserva.equipamentos.dto.EquipamentoResponse;
 import com.reserva.equipamentos.service.EquipamentoService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
+import org.springframework.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
