@@ -34,7 +34,7 @@ public class EquipamentoController {
     @GetMapping
     public ResponseEntity<ApiResponse<List<EquipamentoResponse>>> listar() {
         return ResponseEntity.ok(
-                ApiResponse.success("Equipamentos encontrados", service.listar()));
+                ApiResponse.success("Equipamentos encontrados", service.listar()), HttpStatus.OK);
     }
 
     @Operation(summary = "Buscar equipamento por ID")
