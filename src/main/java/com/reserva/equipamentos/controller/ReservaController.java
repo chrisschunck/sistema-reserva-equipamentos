@@ -37,14 +37,14 @@ public class ReservaController {
     @GetMapping
     public ResponseEntity<ApiResponse<List<ReservaResponse>>> listar() {
         return ResponseEntity.ok(
-                ApiResponse.success("Reservas encontradas", service.listar()));
+                ApiResponse.success("Reservas encontradas", service.listar()), HttpStatus.OK);
     }
 
     @Operation(summary = "Buscar reserva por ID")
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<ReservaResponse>> buscar(@PathVariable Long id) {
         return ResponseEntity.ok(
-                ApiResponse.success("Reserva encontrada", service.buscarPorId(id)));
+                ApiResponse.success("Reserva encontrada", service.buscarPorId(id)), HttpStatus.OK);
     }
 
     @Operation(summary = "Excluir reserva")
@@ -52,6 +52,6 @@ public class ReservaController {
     public ResponseEntity<ApiResponse<Void>> excluir(@PathVariable Long id) {
         service.excluir(id);
         return ResponseEntity.ok(
-                ApiResponse.success("Reserva excluída com sucesso", null));
+                ApiResponse.success("Reserva excluída com sucesso", null), HttpStatus.OK);
     }
 }
