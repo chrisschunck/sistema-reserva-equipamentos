@@ -21,6 +21,14 @@ public class EquipamentoController {
     private final EquipamentoService service;
 
     @Operation(summary = "Cadastrar equipamento")
+    @ApiResponse(responseCode="200", description="OK")
+    @ApiResponse(responseCode="201", description="CREATED")
+    @ApiResponse(responseCode="204", description="NO CONTENT")
+    @ApiResponse(responseCode="400", description="BAD REQUEST")
+    @ApiResponse(responseCode="401", description="Unauthorized")
+    @ApiResponse(responseCode="403", description="Forbidden")
+    @ApiResponse(responseCode="404", description="Not Found")
+    @ApiResponse(responseCode="500", description="Internal Error")
     @PostMapping
     public ResponseEntity<ApiResponse<EquipamentoResponse>> criar(
             @Valid @RequestBody EquipamentoRequest request) {
@@ -31,6 +39,14 @@ public class EquipamentoController {
     }
 
     @Operation(summary = "Listar equipamentos")
+    @ApiResponse(responseCode="200", description="OK")
+    @ApiResponse(responseCode="201", description="CREATED")
+    @ApiResponse(responseCode="204", description="NO CONTENT")
+    @ApiResponse(responseCode="400", description="BAD REQUEST")
+    @ApiResponse(responseCode="401", description="Unauthorized")
+    @ApiResponse(responseCode="403", description="Forbidden")
+    @ApiResponse(responseCode="404", description="Not Found")
+    @ApiResponse(responseCode="500", description="Internal Error")
     @GetMapping
     public ResponseEntity<ApiResponse<List<EquipamentoResponse>>> listar() {
         return ResponseEntity.ok(
@@ -38,6 +54,14 @@ public class EquipamentoController {
     }
 
     @Operation(summary = "Buscar equipamento por ID")
+    @ApiResponse(responseCode="200", description="OK")
+    @ApiResponse(responseCode="201", description="CREATED")
+    @ApiResponse(responseCode="204", description="NO CONTENT")
+    @ApiResponse(responseCode="400", description="BAD REQUEST")
+    @ApiResponse(responseCode="401", description="Unauthorized")
+    @ApiResponse(responseCode="403", description="Forbidden")
+    @ApiResponse(responseCode="404", description="Not Found")
+    @ApiResponse(responseCode="500", description="Internal Error")
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<EquipamentoResponse>> buscar(@PathVariable Long id) {
         return ResponseEntity.ok(
@@ -45,6 +69,14 @@ public class EquipamentoController {
     }
 
     @Operation(summary = "Atualizar equipamento")
+    @ApiResponse(responseCode="200", description="OK")
+    @ApiResponse(responseCode="201", description="CREATED")
+    @ApiResponse(responseCode="204", description="NO CONTENT")
+    @ApiResponse(responseCode="400", description="BAD REQUEST")
+    @ApiResponse(responseCode="401", description="Unauthorized")
+    @ApiResponse(responseCode="403", description="Forbidden")
+    @ApiResponse(responseCode="404", description="Not Found")
+    @ApiResponse(responseCode="500", description="Internal Error")
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponse<EquipamentoResponse>> atualizar(
             @PathVariable Long id,
@@ -55,6 +87,14 @@ public class EquipamentoController {
     }
 
     @Operation(summary = "Excluir equipamento")
+    @ApiResponse(responseCode="200", description="OK")
+    @ApiResponse(responseCode="201", description="CREATED")
+    @ApiResponse(responseCode="204", description="NO CONTENT")
+    @ApiResponse(responseCode="400", description="BAD REQUEST")
+    @ApiResponse(responseCode="401", description="Unauthorized")
+    @ApiResponse(responseCode="403", description="Forbidden")
+    @ApiResponse(responseCode="404", description="Not Found")
+    @ApiResponse(responseCode="500", description="Internal Error")
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse<Void>> excluir(@PathVariable Long id) {
         service.excluir(id);
