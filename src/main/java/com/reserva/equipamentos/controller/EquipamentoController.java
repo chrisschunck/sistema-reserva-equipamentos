@@ -41,7 +41,7 @@ public class EquipamentoController {
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<EquipamentoResponse>> buscar(@PathVariable Long id) {
         return ResponseEntity.ok(
-                ApiResponse.success("Equipamento encontrado", service.buscarPorId(id)));
+                ApiResponse.success("Equipamento encontrado", service.buscarPorId(id)), HttpStatus.OK);
     }
 
     @Operation(summary = "Atualizar equipamento")
@@ -51,7 +51,7 @@ public class EquipamentoController {
             @Valid @RequestBody EquipamentoRequest request) {
         return ResponseEntity.ok(
                 ApiResponse.success("Equipamento atualizado com sucesso",
-                        service.atualizar(id, request)));
+                        service.atualizar(id, request)), HttpStatus.OK);
     }
 
     @Operation(summary = "Excluir equipamento")
@@ -59,6 +59,6 @@ public class EquipamentoController {
     public ResponseEntity<ApiResponse<Void>> excluir(@PathVariable Long id) {
         service.excluir(id);
         return ResponseEntity.ok(
-                ApiResponse.success("Equipamento excluído com sucesso", null));
+                ApiResponse.success("Equipamento excluído com sucesso", null), HttpStatus.OK);
     }
 }
